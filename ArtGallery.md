@@ -1,4 +1,7 @@
+# Роговая Ангелина ИС-22/9-1
 ## Описание базы данных "Art Gallery"
+
+Эта база данных создана для хранения информации о картинной галерее. База данных содержит таблицы для хранения информации о выставке, авторах, изображениях и расположении картин.
 
 ### Таблица "Artists" (Художники)
 
@@ -10,7 +13,9 @@
 - **genre**: жанр творчества художника (VARCHAR(30))
 
 Пример вывода записей из таблицы "Artists":
+```
 SELECT * FROM Artists;
+```
 
 ![image](pictures/image.png)
 
@@ -24,7 +29,10 @@ SELECT * FROM Artists;
 - **paintings_id**: идентификатор картины, выставленной на экспозиции (FOREIGN KEY REFERENCES Paintings(id))
 
 Пример вывода записей из таблицы "Exposed":
+
+```
 SELECT * FROM Exposed;
+```
 
 ![image(1)](pictures/image(1).png)
 
@@ -40,7 +48,10 @@ SELECT * FROM Exposed;
 - **exposed_id**: идентификатор экспозиции на выставке (FOREIGN KEY REFERENCES Exposed(id))
 
 Пример вывода записей из таблицы "Expositions":
+
+```
 SELECT * FROM Expositions;
+```
 
 ![image(2)](pictures/image(2).png)
 
@@ -55,7 +66,10 @@ SELECT * FROM Expositions;
 - **artists_id**: идентификатор художника, создавшего картину (FOREIGN KEY REFERENCES Artists(id))
 
 Пример вывода записей из таблицы "Paintings":
+
+```
 SELECT * FROM Paintings;
+```
 
 ![image(3)](pictures/image(3).png)
 
