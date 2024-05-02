@@ -109,11 +109,13 @@ ORDER BY paintings_id ASC;
 
 ## HAVING 
 
+```
 SELECT Expositions.theme, COUNT() AS paintings_count
 FROM Expositions
 JOIN Exposed ON Expositions.exposed_id = Exposed.exposed_id
 GROUP BY Expositions.theme
 HAVING COUNT() = 1;
+```
 
 ![image(10)](pictures/image(10).png)
 
