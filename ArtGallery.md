@@ -36,7 +36,7 @@ SELECT * FROM Artists;
 SELECT * FROM Exposed;
 ```
 
-![image(1)](pictures/image(1).png)
+![image(1)](pictures/image (1).png)
 
 
 ### Таблица "Expositions" (Выставки)
