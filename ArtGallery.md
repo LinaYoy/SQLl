@@ -31,14 +31,3 @@ SELECT * FROM Exposed;
 
 Пример вывода записей из таблицы "Expositions":
 SELECT * FROM Expositions;
-
-
-### Таблица "Paintings" (Картины)
-
-- **Paintings_id**: уникальный идентификатор картины (PRIMARY KEY)
-- **name**: название картины (VARCHAR(30))
-- **date_of_writing**: дата написания картины (DATE)
-- **artists_id**: идентификатор художника, создавшего картину (FOREIGN KEY REFERENCES Artists(id))
-
-Пример вывода записей из таблицы "Paintings":
-SELECT * FROM Paintings;
