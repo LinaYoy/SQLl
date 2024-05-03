@@ -210,7 +210,7 @@ RIGHT JOIN Paintings ON Artists.artists_id = Paintings.artists_id;
 SELECT * FROM Artists
 FULL OUTER JOIN Paintings ON Artists.artists_id = Paintings.artists_id;
 ```
-![image(18)](pictures/18.png)
+![image(18)](pictures/image(18).png)
 
 Результатом данного запроса будет таблица, содержащая все записи из таблицы Artists и все записи из таблицы Paintings, включая данные об обоих сущностях, при условии их соответствия по artists_id.
 
