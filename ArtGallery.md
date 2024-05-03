@@ -135,6 +135,18 @@ WHERE Artists_id IN (SELECT artists_id FROM Paintings WHERE date_of_writing > '1
 
 Этот запрос выбирает имена художников из таблицы Artists и использует вложенный запрос для выбора названий картин, написанных после 1700 года, из таблицы Paintings.
 
+### 6.2.WHERE
+
+```
+SELECT name
+FROM Paintings
+WHERE artists_id IN (SELECT Artists_id FROM Artists WHERE genre = 'Impressionism');
+```
+
+![image222](pictures/image(222).png)
+
+Этот запрос выберет названия картин, написанных художниками, чей жанр - импрессионизм.
+
 ## 7.Оконные функции
 
 ### 7.1.Агрегатная функция
