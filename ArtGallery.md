@@ -200,7 +200,7 @@ LEFT JOIN Paintings ON Artists.artists_id = Paintings.artists_id;
 SELECT * FROM Artists
 RIGHT JOIN Paintings ON Artists.artists_id = Paintings.artists_id;
 ```
-![image(17)](pictures/17.png)
+![image(17)](pictures/image(17).png)
 
 Результатом данного запроса будет таблица, включающая все записи из таблицы Artists и только те записи из таблицы Paintings, которые имеют соответствующее значение artists_id в таблице Paintings.
 
