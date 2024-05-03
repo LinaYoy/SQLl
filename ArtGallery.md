@@ -155,7 +155,7 @@ HAVING COUNT() = 1;
 SELECT name, birthday, RANK() OVER (ORDER BY birthday) AS artist_rank
 FROM Artists;
 ```
-![image(14)](pictures/14.png)
+![image(14)](pictures/image(14).png)
 
 В результате выполнения этого запроса будут выведены имена художников, их даты рождения, а также их ранг по возрастанию даты рождения
 
