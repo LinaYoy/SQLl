@@ -1,11 +1,11 @@
-# Роговая Ангелина ИС-22/9-1
-## Описание базы данных "Art Gallery"
+# 1.Роговая Ангелина ИС-22/9-1
+## 2.Описание базы данных "Art Gallery"
 
 ![scheme](pictures/image(22).webp)
 
 Эта база данных создана для хранения информации о картинной галерее. База данных содержит таблицы для хранения информации о выставке, авторах, изображениях и расположении картин.
 
-### Таблица "Artists" (Художники)
+### 2.1.Таблица "Artists" (Художники)
 
 ![image(4)](pictures/image%20(4).png)
 
@@ -22,7 +22,7 @@ SELECT * FROM Artists;
 ![image](pictures/image.png)
 
 
-### Таблица "Exposed" (Экспозиции)
+### 2.2.Таблица "Exposed" (Экспозиции)
 
 ![image(5)](pictures/image%20(5).png)
 
@@ -39,7 +39,7 @@ SELECT * FROM Exposed;
 ![image(1)](pictures/image (1).png)
 
 
-### Таблица "Expositions" (Выставки)
+### 2.3.Таблица "Expositions" (Выставки)
 
 ![image(6)](pictures/image%20(6).png)
 
@@ -58,7 +58,7 @@ SELECT * FROM Expositions;
 ![image(2)](pictures/image(2).png)
 
 
-### Таблица "Paintings" (Картины)
+### 2.4.Таблица "Paintings" (Картины)
 
 ![image(7)](pictures/image%20(7).png)
 
@@ -75,7 +75,7 @@ SELECT * FROM Paintings;
 
 ![image(3)](pictures/image(3).png)
 
-## UNION
+## 3.UNION
 
 ```
 SELECT
@@ -95,7 +95,7 @@ date_of_writing (дата написания картины, в противно
 
 Результирующая таблица будет содержать данные из таблиц Artists и Paintings, объединенные по столбцам name.
 
-## ORDER BY
+## 4.ORDER BY
 
 ```
 SELECT hall, paintings_id
@@ -107,7 +107,7 @@ ORDER BY paintings_id ASC;
 
 Этот запрос выбирает столбцы hall и paintings_id из таблицы Exposed и сортирует результат по столбцу paintings_id в порядке возрастания (ASC).
 
-## HAVING 
+## 5.HAVING 
 
 ```
 SELECT Expositions.theme, COUNT() AS paintings_count
@@ -121,7 +121,9 @@ HAVING COUNT() = 1;
 
 Этот запрос объединяет таблицы Expositions и Exposed, группирует данные по теме экспозиции (столбец theme) и выводит количество картин в каждой экспозиции. Затем используется HAVING для фильтрации результатов и оставляются только те экспозиции, в которых количество картин равно 1.
 
-## Вложенный запрос
+## 6.Вложенный запрос
+
+### 6.1.SELECT
 
 ```
 SELECT name, 
@@ -133,9 +135,9 @@ WHERE Artists_id IN (SELECT artists_id FROM Paintings WHERE date_of_writing > '1
 
 Этот запрос выбирает имена художников из таблицы Artists и использует вложенный запрос для выбора названий картин, написанных после 1700 года, из таблицы Paintings.
 
-## Оконные функции
+## 7.Оконные функции
 
-### Агрегатная функция
+### 7.1.Агрегатная функция
 
 ```
 SELECT Expositions.theme, COUNT() AS paintings_count
@@ -149,7 +151,7 @@ HAVING COUNT() = 1;
 
 Этот запрос выбирает тему экспозиции из таблицы Expositions и подсчитывает количество картин, которые были выставлены в рамках каждой экспозиции. Затем результат группируется по теме экспозиции.
 
-### Ранжирующая функция
+### 7.2.Ранжирующая функция
 
 ```
 SELECT name, birthday, RANK() OVER (ORDER BY birthday) AS artist_rank
@@ -159,7 +161,7 @@ FROM Artists;
 
 В результате выполнения этого запроса будут выведены имена художников, их даты рождения, а также их ранг по возрастанию даты рождения
 
-## Функция смещения
+## 7.3.Функция смещения
 
 ```
 SELECT *,
@@ -172,9 +174,9 @@ LIMIT 2 OFFSET 2;
 
 Результат этого запроса будет представлять собой таблицу с двумя строками данных из таблицы Paintings, начиная с третьей строки, отсортированных по столбцу Paintings_id. В результирующей таблице будет добавлен столбец row_number, содержащий порядковый номер каждой строки в результирующем наборе данных.
 
-## JOIN
+## 8.JOIN
 
-### INNER JOIN
+### 8.1.INNER JOIN
 
 ```
 SELECT * FROM Artists
@@ -184,7 +186,7 @@ INNER JOIN Paintings ON Artists.artists_id = Paintings.artists_id;
 
 Результирующая таблица будет содержать все столбцы из таблиц Artists и Paintings, где значения artists_id будут совпадать между этими двумя таблицами. Таким образом, можно получить информацию об художниках и их произведениях, которые написаны ими.
 
-### LEFT JOIN
+### 8.2.LEFT JOIN
 
 ```
 SELECT * FROM Artists
@@ -194,7 +196,7 @@ LEFT JOIN Paintings ON Artists.artists_id = Paintings.artists_id;
 
 Результатом данного запроса будет таблица, включающая все записи из таблицы Artists и только те записи из таблицы Paintings, которые имеют соответствующее значение artists_id в таблице Artists.
 
-### RIGHT JOIN
+### 8.3.RIGHT JOIN
 
 ```
 SELECT * FROM Artists
@@ -204,7 +206,7 @@ RIGHT JOIN Paintings ON Artists.artists_id = Paintings.artists_id;
 
 Результатом данного запроса будет таблица, включающая все записи из таблицы Artists и только те записи из таблицы Paintings, которые имеют соответствующее значение artists_id в таблице Paintings.
 
-### FULL OUTER JOIN
+### 8.4.FULL OUTER JOIN
 
 ```
 SELECT * FROM Artists
@@ -214,7 +216,7 @@ FULL OUTER JOIN Paintings ON Artists.artists_id = Paintings.artists_id;
 
 Результатом данного запроса будет таблица, содержащая все записи из таблицы Artists и все записи из таблицы Paintings, включая данные об обоих сущностях, при условии их соответствия по artists_id.
 
-### CROSS JOIN
+### 8.5.CROSS JOIN
 
 ```
 SELECT Artists.name, Paintings.name
@@ -225,7 +227,7 @@ CROSS JOIN Paintings;
 
 Результатом такого запроса будет таблица, в которой будет отображено сочетание каждого имени художника из таблицы Artists с каждым именем картины из таблицы Paintings.
 
-## CASE
+## 9.CASE
 
 ```
 SELECT name,
@@ -241,7 +243,7 @@ FROM Artists;
 
 В данном примере используется CASE-выражение для создания нового столбца "artcategory", который присваивает каждому художнику категорию искусства в зависимости от их жанра. 
 
-## WITH
+## 10.WITH
 
 ```
 WITH Artists_paintings AS
