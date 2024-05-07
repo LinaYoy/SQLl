@@ -235,7 +235,7 @@ SELECT Artists.name, Paintings.name
 FROM Artists
 CROSS JOIN Paintings;
 ```
-![image(19)](pictures/19.png)
+![image(19)](pictures/cross_join.png)
 
 Результатом такого запроса будет таблица, в которой будет отображено сочетание каждого имени художника из таблицы Artists с каждым именем картины из таблицы Paintings.
 
