@@ -103,7 +103,7 @@ FROM Exposed
 ORDER BY paintings_id ASC;
 ```
 
-![image(9)](pictures/image(9).png)
+![image(9)](pictures/Order_By.png)
 
 Этот запрос выбирает столбцы hall и paintings_id из таблицы Exposed и сортирует результат по столбцу paintings_id в порядке возрастания (ASC).
 
