@@ -194,7 +194,7 @@ LIMIT 2 OFFSET 2;
 SELECT * FROM Artists
 INNER JOIN Paintings ON Artists.artist_id = Paintings.artist_id;
 ```
-![image(15)](pictures/image(15).png)
+![image(15)](pictures/Inner_join.png)
 
 Результирующая таблица будет содержать все столбцы из таблиц Artists и Paintings, где значения artist_id будут совпадать между этими двумя таблицами. Таким образом, можно получить информацию об художниках и их произведениях, которые написаны ими.
 
