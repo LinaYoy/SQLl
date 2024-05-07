@@ -98,14 +98,14 @@ date_of_writing (дата написания картины, в противно
 ## 4.ORDER BY
 
 ```
-SELECT hall, paintings_id
+SELECT hall, painting_id
 FROM Exposed
-ORDER BY paintings_id ASC;
+ORDER BY painting_id ASC;
 ```
 
 ![image(9)](pictures/Order_By.png)
 
-Этот запрос выбирает столбцы hall и paintings_id из таблицы Exposed и сортирует результат по столбцу paintings_id в порядке возрастания (ASC).
+Этот запрос выбирает столбцы hall и painting_id из таблицы Exposed и сортирует результат по столбцу painting_id в порядке возрастания (ASC).
 
 ## 5.HAVING 
 
