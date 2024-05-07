@@ -202,31 +202,31 @@ INNER JOIN Paintings ON Artists.artist_id = Paintings.artist_id;
 
 ```
 SELECT * FROM Artists
-LEFT JOIN Paintings ON Artists.artists_id = Paintings.artists_id;
+LEFT JOIN Paintings ON Artists.artist_id = Paintings.artist_id;
 ```
 ![image(16)](pictures/image(16).png)
 
-Результатом данного запроса будет таблица, включающая все записи из таблицы Artists и только те записи из таблицы Paintings, которые имеют соответствующее значение artists_id в таблице Artists.
+Результатом данного запроса будет таблица, включающая все записи из таблицы Artists и только те записи из таблицы Paintings, которые имеют соответствующее значение artist_id в таблице Artists.
 
 ### 8.3.RIGHT JOIN
 
 ```
 SELECT * FROM Artists
-RIGHT JOIN Paintings ON Artists.artists_id = Paintings.artists_id;
+RIGHT JOIN Paintings ON Artists.artist_id = Paintings.artist_id;
 ```
 ![image(17)](pictures/image(17).png)
 
-Результатом данного запроса будет таблица, включающая все записи из таблицы Artists и только те записи из таблицы Paintings, которые имеют соответствующее значение artists_id в таблице Paintings.
+Результатом данного запроса будет таблица, включающая все записи из таблицы Artists и только те записи из таблицы Paintings, которые имеют соответствующее значение artist_id в таблице Paintings.
 
 ### 8.4.FULL OUTER JOIN
 
 ```
 SELECT * FROM Artists
-FULL OUTER JOIN Paintings ON Artists.artists_id = Paintings.artists_id;
+FULL OUTER JOIN Paintings ON Artists.artist_id = Paintings.artist_id;
 ```
 ![image(18)](pictures/image(18).png)
 
-Результатом данного запроса будет таблица, содержащая все записи из таблицы Artists и все записи из таблицы Paintings, включая данные об обоих сущностях, при условии их соответствия по artists_id.
+Результатом данного запроса будет таблица, содержащая все записи из таблицы Artists и все записи из таблицы Paintings, включая данные об обоих сущностях, при условии их соответствия по artist_id.
 
 ### 8.5.CROSS JOIN
 
@@ -260,7 +260,7 @@ FROM Artists;
 ```
 WITH Artists_paintings AS
 	(SELECT Artists.* FROM Paintings
-     INNER JOIN Artists ON Artists.Artists_id = Paintings.artists_id)
+     INNER JOIN Artists ON Artists.Artist_id = Paintings.artist_id)
      
 SELECT name, COUNT(name) as amount FROM Artists_paintings GROUP BY name;
 ```
