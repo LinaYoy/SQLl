@@ -11,7 +11,7 @@
 
 - **Artists_id**: уникальный идентификатор художника (INTEGER PRIMARY KEY AUTOINCREMENT)
 - **name**: имя художника (VARCHAR(30))
-- **birthday**: дата рождения художника (TEXT)
+- **birthday**: дата рождения художника (DATE)
 - **genre**: жанр творчества художника (VARCHAR(30))
 
 Пример вывода записей из таблицы "Artists":
