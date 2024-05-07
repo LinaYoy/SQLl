@@ -131,7 +131,7 @@ SELECT name,
 FROM Artists
 WHERE Artist_id IN (SELECT artist_id FROM Paintings WHERE date_of_writing > '1700');
 ```
-![image(11)](pictures/image(11).png)
+![image(11)](pictures/Select(вз).png)
 
 Этот запрос выбирает имена художников из таблицы Artists и использует вложенный запрос для выбора названий картин, написанных после 1700 года, из таблицы Paintings.
 
