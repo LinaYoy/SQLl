@@ -9,7 +9,7 @@
 
 ![image(4)](pictures/artists_birthday.png)
 
-- **Artists_id**: уникальный идентификатор художника (PRIMARY KEY)
+- **Artists_id**: уникальный идентификатор художника (INTEGER PRIMARY KEY AUTOINCREMENT)
 - **name**: имя художника (VARCHAR(30))
 - **birthday**: дата рождения художника (TEXT)
 - **genre**: жанр творчества художника (VARCHAR(30))
@@ -26,7 +26,7 @@ SELECT * FROM Artists;
 
 ![image(5)](pictures/image%20(5).png)
 
-- **Exposed_id**: уникальный идентификатор экспозиции (PRIMARY KEY)
+- **Exposed_id**: уникальный идентификатор экспозиции (INTEGER PRIMARY KEY AUTOINCREMENT)
 - **hall**: название зала, где проводится экспозиция (VARCHAR(30))
 - **paintings_id**: идентификатор картины, выставленной на экспозиции (FOREIGN KEY REFERENCES Paintings(id))
 
@@ -43,7 +43,7 @@ SELECT * FROM Exposed;
 
 ![image(6)](pictures/Exposition_id.png)
 
-- **Expositions_id**: уникальный идентификатор выставки (PRIMARY KEY)
+- **Expositions_id**: уникальный идентификатор выставки (INTEGER PRIMARY KEY AUTOINCREMENT)
 - **theme**: тема выставки (VARCHAR(30))
 - **begining**: дата начала выставки (DATE)
 - **ending**: дата окончания выставки (DATE)
@@ -62,7 +62,7 @@ SELECT * FROM Expositions;
 
 ![image(7)](pictures/painting_id.png)
 
-- **Paintings_id**: уникальный идентификатор картины (PRIMARY KEY)
+- **Paintings_id**: уникальный идентификатор картины (INTEGER PRIMARY KEY AUTOINCREMENT)
 - **name**: название картины (VARCHAR(30))
 - **date_of_writing**: дата написания картины (DATE)
 - **artists_id**: идентификатор художника, создавшего картину (FOREIGN KEY REFERENCES Artists(id))
