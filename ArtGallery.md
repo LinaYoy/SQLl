@@ -140,7 +140,7 @@ WHERE Artist_id IN (SELECT artist_id FROM Paintings WHERE date_of_writing > '170
 ```
 SELECT name
 FROM Paintings
-WHERE artists_id IN (SELECT Artists_id FROM Artists WHERE genre = 'Impressionism');
+WHERE artist_id IN (SELECT Artist_id FROM Artists WHERE genre = 'Impressionism');
 ```
 
 ![image222](pictures/image(222).png)
