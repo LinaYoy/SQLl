@@ -127,9 +127,9 @@ HAVING COUNT() = 1;
 
 ```
 SELECT name, 
-       (SELECT name FROM Paintings WHERE artists_id = Artists.Artists_id) AS painting_name
+       (SELECT name FROM Paintings WHERE artist_id = Artists.Artist_id) AS painting_name
 FROM Artists
-WHERE Artists_id IN (SELECT artists_id FROM Paintings WHERE date_of_writing > '1700');
+WHERE Artist_id IN (SELECT artist_id FROM Paintings WHERE date_of_writing > '1700');
 ```
 ![image(11)](pictures/image(11).png)
 
