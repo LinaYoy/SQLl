@@ -7,7 +7,7 @@
 
 ### 2.1.Таблица "Artists" (Художники)
 
-![image(4)](pictures/image%20(4).png)
+![image(4)](pictures/artist_id.png)
 
 - **Artists_id**: уникальный идентификатор художника (PRIMARY KEY)
 - **name**: имя художника (VARCHAR(30))
@@ -19,7 +19,7 @@
 SELECT * FROM Artists;
 ```
 
-![image](pictures/image.png)
+![image](pictures/Select(artists).png)
 
 
 ### 2.2.Таблица "Exposed" (Экспозиции)
@@ -41,7 +41,7 @@ SELECT * FROM Exposed;
 
 ### 2.3.Таблица "Expositions" (Выставки)
 
-![image(6)](pictures/image%20(6).png)
+![image(6)](pictures/Exposition_id.png)
 
 - **Expositions_id**: уникальный идентификатор выставки (PRIMARY KEY)
 - **theme**: тема выставки (VARCHAR(30))
@@ -55,12 +55,12 @@ SELECT * FROM Exposed;
 SELECT * FROM Expositions;
 ```
 
-![image(2)](pictures/image(2).png)
+![image(2)](pictures/Select(expositions).png)
 
 
 ### 2.4.Таблица "Paintings" (Картины)
 
-![image(7)](pictures/image%20(7).png)
+![image(7)](pictures/painting_id.png)
 
 - **Paintings_id**: уникальный идентификатор картины (PRIMARY KEY)
 - **name**: название картины (VARCHAR(30))
@@ -73,7 +73,7 @@ SELECT * FROM Expositions;
 SELECT * FROM Paintings;
 ```
 
-![image(3)](pictures/image(3).png)
+![image(3)](pictures/Select(paintings).png)
 
 ## 3.UNION
 
