@@ -143,7 +143,7 @@ FROM Paintings
 WHERE artist_id IN (SELECT Artist_id FROM Artists WHERE genre = 'Impressionism');
 ```
 
-![image222](pictures/image(222).png)
+![image222](pictures/where.png)
 
 Этот запрос выберет названия картин, написанных художниками, чей жанр - импрессионизм.
 
