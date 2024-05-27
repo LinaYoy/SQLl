@@ -149,11 +149,11 @@ WHERE artist_id IN (SELECT Artist_id FROM Artists WHERE genre = 'Impressionism')
 ### 7.1.Агрегатная функция
 
 ```
-SELECT Expositions.theme, COUNT() AS paintings_count
+SELECT Expositions.theme, 
+COUNT(Exposed.painting_id) AS number_of_painting
 FROM Expositions
 JOIN Exposed ON Expositions.exposed_id = Exposed.exposed_id
-GROUP BY Expositions.theme
-HAVING COUNT() = 1;
+GROUP BY Expositions.theme;
 ```
 
 ![image(12)](pictures/image(12).png)
