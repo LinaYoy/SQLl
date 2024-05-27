@@ -78,20 +78,18 @@ SELECT * FROM Paintings;
 ## 3.UNION
 
 ```
-SELECT
-name,
-birthday, genre FROM Artists
+SELECT name, date_of_writing, artist_id 
+FROM Paintings
 UNION
-SELECT name,
-date_of_writing, NULL FROM Paintings;
+SELECT name, birthday, genre
+FROM Artists
 ```
 ![image(8)](pictures/image%20(8).png)
 
 Результатом выполнения данного запроса будет таблица, содержащая следующие столбцы:
-name (название художника или картины)
-birthday (дата рождения художника, в противном случае NULL)
-genre (жанр художника, в противном случае NULL)
-date_of_writing (дата написания картины, в противном случае NULL)
+name, date_of_writing,  artist_id. 
+
+Оператор UNION  убирает дубликаты, поэтому в результате получим только уникальные значения.
 
 Результирующая таблица будет содержать данные из таблиц Artists и Paintings, объединенные по столбцам name.
 
