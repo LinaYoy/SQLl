@@ -84,7 +84,8 @@ UNION
 SELECT name, birthday, genre
 FROM Artists
 ```
-![image(8)](pictures/image%20(8).png)
+![image(Union)](pictures/UNION.png)
+
 
 Результатом выполнения данного запроса будет таблица, содержащая следующие столбцы:
 name, date_of_writing,  artist_id. 
