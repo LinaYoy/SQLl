@@ -189,7 +189,7 @@ LIMIT 2 OFFSET 2;
 
 ```
 SELECT * FROM artist
-INNER JOIN painting ON artists.artist_id = painting.artist_id;
+INNER JOIN painting ON artist.artist_id = painting.artist_id;
 ```
 ![image(15)](pictures/Inner_join.png)
 
