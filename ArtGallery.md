@@ -7,7 +7,7 @@
 
 ### 2.1.Таблица "Artists" (Художники)
 
-![image(4)](pictures/artists_birthday.png)
+![image(4)](pictures/image.png)
 
 - **Artists_id**: уникальный идентификатор художника (INTEGER PRIMARY KEY AUTOINCREMENT)
 - **name**: имя художника (VARCHAR(30))
