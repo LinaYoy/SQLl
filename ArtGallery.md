@@ -219,7 +219,7 @@ RIGHT JOIN painting ON artist.artist_id = painting.artist_id;
 
 ```
 SELECT * FROM artist
-FULL OUTER JOIN painting ON artists.artist_id = painting.artist_id;
+FULL OUTER JOIN painting ON artist.artist_id = painting.artist_id;
 ```
 ![image(18)](pictures/Full_Outer_Join.png)
 
